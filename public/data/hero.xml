@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero>
+  <name>Ayush Upadhyay</name>
+  <tagline>Frontend Developer</tagline>
+  <subtitle>Building scalable, high-performance web applications with React &amp; Next.js</subtitle>
+  <location>Lucknow, UP, India</location>
+  <email>ayush7upadhyay@gmail.com</email>
+  <socials>
+    <github>https://github.com/ayush81upadhyay</github>
+    <linkedin>https://www.linkedin.com/in/ayush7upadhyay/</linkedin>
+  </socials>
+  <cta>View My Work</cta>
+</hero>

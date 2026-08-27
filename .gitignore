@@ -1,0 +1,62 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# ── Dependencies ──────────────────────────────────────────────────────────────
+/node_modules
+/.pnp
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+
+# ── Build output ──────────────────────────────────────────────────────────────
+/build
+/dist
+/out
+
+# ── Testing & coverage ────────────────────────────────────────────────────────
+/coverage
+*.lcov
+.nyc_output
+
+# ── Environment & secrets ─────────────────────────────────────────────────────
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+*.pem
+*.key
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+logs/
+*.log
+
+# ── OS artefacts ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editor & IDE ──────────────────────────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ── Misc ──────────────────────────────────────────────────────────────────────
+.cache
+.parcel-cache
+.eslintcache
+.stylelintcache
+*.tsbuildinfo

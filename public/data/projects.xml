@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projects>
+  <project>
+    <id>1</id>
+    <title>Naturyis</title>
+    <description>A full-featured e-commerce platform for natural products with React.js, Redux and Node.js backend. Features include product filtering, cart management, Razorpay payments, and admin dashboard.</description>
+    <tech>React.js, Redux, Node.js, MongoDB, Razorpay</tech>
+    <github>https://github.com/ayush81upadhyay/Naturyis</github>
+    <live>https://ayush81upadhyay.github.io/Naturyis</live>
+    <featured>true</featured>
+  </project>
+  <project>
+    <id>2</id>
+    <title>AON SSO Integration</title>
+    <description>Enterprise-level Single Sign-On implementation using Okta for a large financial services client. Includes secure token handling, role-based access control, and encrypted data transmission.</description>
+    <tech>React.js, Okta, TypeScript, REST APIs</tech>
+    <github></github>
+    <live></live>
+    <featured>true</featured>
+  </project>
+  <project>
+    <id>3</id>
+    <title>Portfolio Website</title>
+    <description>This very portfolio — built with React.js, Redux, Framer Motion animations, and XML-driven dynamic data. Designed for easy content updates without code changes.</description>
+    <tech>React.js, Redux, Framer Motion, XML</tech>
+    <github>https://github.com/ayush81upadhyay/my-portfolio</github>
+    <live></live>
+    <featured>false</featured>
+  </project>
+</projects>

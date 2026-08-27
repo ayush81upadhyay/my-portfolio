@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skills>
+  <category name="Frontend">
+    <skill level="95">React.js</skill>
+    <skill level="88">Next.js</skill>
+    <skill level="85">TypeScript</skill>
+    <skill level="90">JavaScript (ES6+)</skill>
+    <skill level="82">Redux / Redux Toolkit</skill>
+    <skill level="80">Framer Motion</skill>
+  </category>
+  <category name="Backend">
+    <skill level="75">Node.js</skill>
+    <skill level="72">Express.js</skill>
+    <skill level="70">REST APIs</skill>
+    <skill level="65">GraphQL</skill>
+  </category>
+  <category name="DevOps &amp; Tools">
+    <skill level="70">Docker</skill>
+    <skill level="68">AWS</skill>
+    <skill level="90">Git / GitHub</skill>
+    <skill level="65">CI/CD</skill>
+  </category>
+  <category name="Database">
+    <skill level="72">MongoDB</skill>
+    <skill level="65">PostgreSQL</skill>
+    <skill level="60">Redis</skill>
+  </category>
+</skills>

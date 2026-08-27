@@ -1,0 +1,84 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-deep: #0f0f1e;
+  --bg-mid: #13132a;
+  --bg-card: rgba(255,255,255,0.045);
+  --accent: #818cf8;
+  --accent-vivid: #6366f1;
+  --accent-soft: #a5b4fc;
+  --text-primary: #eeeef8;
+  --text-muted: #9090b8;
+  --text-faint: #5a5a7a;
+  --border: rgba(129,140,248,0.15);
+  --glow: rgba(99,102,241,0.18);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Sections alternate between two slightly different backgrounds */
+.section { padding: 7rem 0; }
+.section:nth-child(even) { background: var(--bg-mid); }
+.section:nth-child(odd)  { background: var(--bg-deep); }
+
+.section-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 6%;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-label::after {
+  content: '';
+  display: inline-block;
+  width: 56px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+/* Shared highlight arrow used in multiple components */
+.highlight-arrow { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+
+/* Loader */
+.loader-screen {
+  min-height: 100vh;
+  background: var(--bg-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-ring {
+  width: 52px;
+  height: 52px;
+  border: 3px solid rgba(129,140,248,0.18);
+  border-top-color: var(--accent-vivid);
+  border-radius: 50%;
+  animation: spin 0.85s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: rgba(129,140,248,0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-vivid); }
