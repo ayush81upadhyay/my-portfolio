@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<education>
+  <entry>
+    <id>1</id>
+    <institution>Birla Institute of Technology, Mesra</institution>
+    <degree>Bachelor of Engineering (BE)</degree>
+    <field>Computer Science &amp; Engineering</field>
+    <period>Jul 2017 – May 2021</period>
+    <grade>78.40%</grade>
+    <status>Completed</status>
+    <highlights>
+      <point>Core coursework in Data Structures, Algorithms, OS, DBMS, Computer Networks</point>
+      <point>Skills: C Programming, Git, Software Engineering fundamentals</point>
+    </highlights>
+  </entry>
+  <entry>
+    <id>2</id>
+    <institution>Indira Gandhi National Open University</institution>
+    <degree>Post Graduate Certificate in Cyber Law</degree>
+    <field>Cyber Law &amp; Data Privacy</field>
+    <period>Jul 2025 – Jul 2026</period>
+    <grade>Ongoing</grade>
+    <status>Ongoing</status>
+    <highlights>
+      <point>MIR011 – Cyberspace Technology &amp; Social Issues</point>
+      <point>MIR012 – Regulation of Cyberspace</point>
+      <point>MIR013 – Commerce &amp; Cyberspace</point>
+      <point>MIR014 – Privacy &amp; Data Protection</point>
+      <point>Gained foundational understanding of cyber law and the IT Act 2000 and its real-world application in digital governance</point>
+      <point>Understood key categories of cyber crimes: hacking, phishing, identity theft, and online fraud</point>
+      <point>Learned how electronic contracts and e-commerce transactions are legally validated and regulated</point>
+      <point>Built awareness of data protection, privacy rights, and emerging compliance frameworks in digital environments</point>
+      <point>Explored intellectual property issues in cyberspace: copyright, trademarks, and domain disputes</point>
+      <point>Acquired knowledge of cyber jurisdiction challenges and cross-border enforcement issues</point>
+    </highlights>
+  </entry>
+  <entry>
+    <id>3</id>
+    <institution>Bharatiya Vidya Bhavan (BVB)</institution>
+    <degree>Intermediate</degree>
+    <field>Science &amp; Mathematics</field>
+    <period>Jul 2014 – May 2016</period>
+    <grade>92.80%</grade>
+    <status>Completed</status>
+    <highlights>
+      <point>Physics, Chemistry, Mathematics — strong foundation in analytical and logical reasoning</point>
+    </highlights>
+  </entry>
+  <entry>
+    <id>4</id>
+    <institution>Red Rose Senior Secondary School</institution>
+    <degree>Matriculation</degree>
+    <field>General</field>
+    <period>Jul 2012 – May 2014</period>
+    <grade>CGPA 10</grade>
+    <status>Completed</status>
+    <highlights>
+      <point>Achieved perfect CGPA of 10 — school topper in academics</point>
+    </highlights>
+  </entry>
+</education>

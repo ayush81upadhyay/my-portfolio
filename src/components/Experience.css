@@ -1,0 +1,98 @@
+.exp-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.exp-tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid var(--border);
+}
+
+.exp-tab {
+  padding: 0.85rem 1.4rem;
+  color: var(--text-faint);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-left: 2px solid transparent;
+  margin-left: -2px;
+}
+
+.exp-tab:hover { color: var(--accent-soft); }
+
+.exp-tab.active {
+  color: var(--accent);
+  border-left-color: var(--accent-vivid);
+  background: var(--glow);
+}
+
+.exp-detail { padding: 0.5rem 0; }
+
+.exp-role {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.4rem;
+}
+
+.exp-role span { color: var(--accent-vivid); }
+
+.exp-meta {
+  font-size: 0.85rem;
+  color: var(--text-faint);
+  letter-spacing: 0.5px;
+  margin: 0 0 0.5rem;
+  font-family: monospace;
+}
+
+.exp-project {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 1.2rem;
+}
+
+.exp-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.exp-points li {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .exp-layout {
+    grid-template-columns: 1fr;
+  }
+  .exp-tabs {
+    flex-direction: row;
+    border-left: none;
+    border-bottom: 2px solid var(--border);
+  }
+  .exp-tab {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    margin-left: 0;
+    margin-bottom: -2px;
+  }
+  .exp-tab.active {
+    border-left-color: transparent;
+    border-bottom-color: var(--accent-vivid);
+  }
+}

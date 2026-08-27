@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<experience>
+  <job>
+    <id>1</id>
+    <company>Infosys</company>
+    <role>Senior Associate Consultant</role>
+    <period>Sep 2025 – Present</period>
+    <location>Chandigarh, India · Hybrid</location>
+    <project>AON Shared Services | AON Meridian | DX-PU1</project>
+    <points>
+      <point>Client: AON Risk Services — developed and implemented scalable UI pages based on Figma designs across multiple pods</point>
+      <point>Handled complex UI edge cases to ensure seamless user experience and application stability</point>
+      <point>Integrated and implemented multiple APIs for efficient frontend-backend communication</point>
+      <point>Implemented Single Sign-On (SSO) authentication using Okta Identity Provider in AON Shared Services application</point>
+      <point>Implemented encryption and decryption logic across multiple user roles in the AON Meridian application to enhance data security and access control</point>
+      <point>Identified, debugged, and fixed defects within the Cert Center pod</point>
+      <point>Collaborated with cross-functional teams to deliver high-quality and optimized solutions</point>
+    </points>
+  </job>
+  <job>
+    <id>2</id>
+    <company>TCS (SE)</company>
+    <role>System Engineer</role>
+    <period>Feb 2024 – Aug 2025</period>
+    <location>Lucknow, India · On-site</location>
+    <project>SMB iDL – LMS (TCSiON) &amp; Digital Classroom (DCR)</project>
+    <points>
+      <point>Worked on the HandsOn Module — a React.js and Node.js-based sub-system in a cloud-hosted LMS platform used for virtual assessments and collaborative learning</point>
+      <point>Developed and maintained frontend interfaces using React.js &amp; Redux ensuring a responsive, intuitive UX for managing virtual machines (VMs)</point>
+      <point>Built backend APIs using Node.js, Express.js, and MongoDB, handling business logic for VM configuration, assessment lifecycle, and audit logs</point>
+      <point>Upgraded and automated VM setup workflows (OS upgrade to Ubuntu 22.04, custom package installations, proxy configuration)</point>
+      <point>Developed a "Duplicate VM" utility to clone configurations quickly, reducing setup time by 60%</point>
+      <point>Implemented instructional prompts and package-level guidance using dynamic UI components</point>
+      <point>Designed and developed the Bulk Class Scheduler module for the DCR K12 segment, streamlining online class creation for 500+ entries via Excel upload and Node.js validation</point>
+      <point>Actively contributed to agile ceremonies and coordinated with QA, UI/UX designers, BAs, and performance engineers for seamless releases</point>
+    </points>
+  </job>
+  <job>
+    <id>3</id>
+    <company>TCS (ASE)</company>
+    <role>Assistant System Engineer</role>
+    <period>Feb 2023 – Jan 2024</period>
+    <location>Lucknow, India · On-site</location>
+    <project>Lloyds Banking Group (UK) – Payment Modernization | TCS Interactive</project>
+    <points>
+      <point>Developed and integrated React.js + Redux based UI components for Lloyds' payment modernization initiative, migrating from on-premise to GCP-based architecture</point>
+      <point>Integrated secure APIs using ID&amp;Auth Lab services (authorization code, JWT token, access token) with modules like Abusive Reference, SRD, and COP</point>
+      <point>Contributed to Jira spikes on onboarding the ID&amp;Auth Lab and analyzing JWT token mapping within the frontend codebase</point>
+      <point>Built a local mock server using Express.js to simulate backend responses, improving development efficiency by ~40%</point>
+      <point>Wrote unit test cases for new features and improved frontend code coverage by 80%, ensuring stable CI/CD pipeline performance</point>
+    </points>
+  </job>
+  <job>
+    <id>4</id>
+    <company>TCS (Trainee)</company>
+    <role>Assistant System Engineer — Trainee</role>
+    <period>Feb 2022 – Jan 2023</period>
+    <location>Lucknow, India · On-site</location>
+    <project>Training &amp; Foundation Program</project>
+    <points>
+      <point>Completed rigorous training in full-stack development including React.js, Node.js, and cloud fundamentals</point>
+      <point>Gained hands-on experience with Docker, Amazon EC2, and cloud deployment pipelines</point>
+      <point>Built foundational projects covering REST APIs, database design, and frontend component architecture</point>
+    </points>
+  </job>
+</experience>
