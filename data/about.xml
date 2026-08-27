@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<about>
+  <summary>I'm a passionate Frontend Developer with 4+ years of experience crafting intuitive and performant web interfaces. I specialize in React.js and Next.js ecosystems, with a strong foundation in backend integrations, DevOps, and cloud technologies.</summary>
+  <highlights>
+    <highlight>4+ years of professional experience in frontend development</highlight>
+    <highlight>Currently Senior Associate Consultant at Infosys</highlight>
+    <highlight>Expert in React, Redux, TypeScript, and Next.js</highlight>
+    <highlight>Experience with Docker, MongoDB, and AWS deployments</highlight>
+  </highlights>
+</about>
