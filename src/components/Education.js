@@ -41,7 +41,19 @@ function Education({ data }) {
               >
                 <div className="edu-dot" />
                 <div className="edu-card-inner">
-                  <div className="edu-header" onClick={() => setExpanded(isOpen ? null : i)}>
+                  <div
+                    className="edu-header"
+                    role="button"
+                    tabIndex={0}
+                    aria-expanded={isOpen}
+                    onClick={() => setExpanded(isOpen ? null : i)}
+                    onKeyDown={(event) => {
+                      if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        setExpanded(isOpen ? null : i);
+                      }
+                    }}
+                  >
                     <div className="edu-header-left">
                       <span
                         className="edu-status-badge"

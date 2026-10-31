@@ -21,6 +21,29 @@
   border-color: rgba(129, 140, 248, 0.4);
   box-shadow: 0 8px 32px var(--glow);
 }
+.project-card { position: relative; overflow: hidden; }
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 auto;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 116, 108, 0.14), transparent 70%);
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+.project-card:hover::after { opacity: 1; transform: scale(1); }
+.project-links a:hover { transform: translateY(-2px); }
+.project-card:hover { border-color: rgba(37, 99, 217, 0.38); box-shadow: 0 14px 34px rgba(37, 99, 217, 0.12); }
+.project-card.featured { border-color: rgba(227, 71, 71, 0.34); }
+.project-icon { color: #d33f45; }
+.project-links a:hover { color: #1d4fc4; border-color: #739de8; }
+.project-title { color: #202b42; }
+.project-desc { color: #56647a; }
+.tech-tag { color: #1d4fc4; background: #eaf1ff; }
 
 .project-card.featured {
   border-color: rgba(129, 140, 248, 0.25);
@@ -86,4 +109,29 @@
   border-radius: 4px;
   padding: 0.25rem 0.6rem;
   font-family: monospace;
+}
+
+.projects-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.projects-artwork { left: 0; bottom: 0; opacity: 0.2; }
+.project-card {
+  min-width: 0;
+  background: linear-gradient(145deg, #fff 0%, #faf8ff 100%);
+  box-shadow: 0 8px 24px rgba(56, 38, 117, 0.05);
+}
+.project-card:hover {
+  border-color: rgba(112, 72, 232, 0.4);
+  box-shadow: 0 14px 34px rgba(112, 72, 232, 0.14);
+}
+.project-card.featured { border-color: rgba(255, 116, 108, 0.42); }
+.project-icon { color: #e26075; }
+.project-links a { color: #77718d; }
+.project-links a:hover { color: #5b3bd5; border-color: #9c79ec; }
+.project-title { color: #302b48; overflow-wrap: anywhere; }
+.project-desc { color: #656178; overflow-wrap: anywhere; }
+.tech-tag { color: #5b3bd5; background: #f0ebff; }
+
+@media (max-width: 600px) {
+  .projects-grid { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  .project-card { padding: 1.4rem; }
+  .projects-artwork { width: min(58vw, 240px); left: 0; bottom: 0; opacity: 0.12; }
 }

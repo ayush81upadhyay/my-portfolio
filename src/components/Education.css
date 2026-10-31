@@ -46,6 +46,9 @@
   border-color: rgba(99, 102, 241, 0.35);
   box-shadow: 0 6px 28px rgba(99, 102, 241, 0.1);
 }
+.edu-header { transition: background 0.2s ease; }
+.edu-header:hover { background: linear-gradient(90deg, rgba(112, 72, 232, 0.055), rgba(255, 116, 108, 0.035)); }
+.edu-header:focus-visible { outline: 3px solid rgba(112, 72, 232, 0.35); outline-offset: -3px; }
 
 .edu-header {
   display: flex;
@@ -152,4 +155,41 @@
     gap: 1rem;
   }
   .edu-chevron { display: none; }
+}
+.edu-timeline::before { background: linear-gradient(180deg, #2563d9, #e34747, transparent); }
+.edu-dot { border-color: #edf3ff; background: #2563d9; box-shadow: 0 0 10px rgba(37, 99, 217, 0.42); }
+.edu-card-inner { border-color: rgba(37, 99, 217, 0.16); }
+.edu-card-inner:hover { border-color: rgba(37, 99, 217, 0.38); box-shadow: 0 12px 30px rgba(37, 99, 217, 0.11); }
+.edu-header:hover { background: linear-gradient(90deg, rgba(37, 99, 217, 0.055), rgba(227, 71, 71, 0.035)); }
+.edu-degree span, .edu-chevron, .edu-grade { color: #245bd0; }
+.edu-points { border-top-color: rgba(37, 99, 217, 0.12); }
+
+.edu-timeline { min-width: 0; }
+.edu-dot { border-color: #f2efff; background: #7048e8; }
+.edu-card-inner {
+  background: linear-gradient(145deg, #fff 0%, #fbf9ff 100%);
+  border-color: rgba(112, 72, 232, 0.16);
+  box-shadow: 0 8px 24px rgba(56, 38, 117, 0.05);
+}
+.edu-card-inner:hover {
+  border-color: rgba(112, 72, 232, 0.38);
+  box-shadow: 0 12px 30px rgba(112, 72, 232, 0.12);
+}
+.edu-institution { color: #302b48; }
+.edu-degree { color: #77718d; }
+.edu-degree span, .edu-chevron { color: #7048e8; }
+.edu-period { color: #858198; }
+.edu-grade { color: #7048e8; }
+.edu-points { border-top-color: rgba(112, 72, 232, 0.12); }
+.edu-points li { color: #656178; }
+
+@media (max-width: 640px) {
+  .edu-timeline { padding-left: 1.15rem; padding-right: 1.15rem; }
+  .edu-dot { left: -1.65rem; }
+  .edu-header { padding: 1.1rem; }
+  .edu-header-left { align-items: flex-start; min-width: 0; flex-wrap: wrap; }
+  .edu-institution, .edu-degree { overflow-wrap: anywhere; }
+  .edu-header-right { flex-wrap: wrap; }
+  .edu-points { padding: 0 1.1rem 1.1rem; }
+  .edu-card, .edu-card-inner, .edu-header, .edu-header-left, .edu-header-right, .edu-points { min-width: 0; max-width: 100%; }
 }

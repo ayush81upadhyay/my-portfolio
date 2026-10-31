@@ -9,6 +9,8 @@
     <skill level="80">Framer Motion</skill>
   </category>
   <category name="Backend">
+    <skill level="70">Java</skill>
+    <skill level="70">Spring Boot</skill>
     <skill level="75">Node.js</skill>
     <skill level="72">Express.js</skill>
     <skill level="70">REST APIs</skill>

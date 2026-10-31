@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import './About.css';
 
 function About({ data }) {
+  const [portraitLoaded, setPortraitLoaded] = useState(false);
+  const [portraitFailed, setPortraitFailed] = useState(false);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
@@ -25,7 +27,22 @@ function About({ data }) {
         >
           About Me
         </motion.div>
-        <div className="about-grid">
+        <div className={`about-grid${portraitLoaded ? ' has-portrait' : ''}`}>
+          {data.portrait && !portraitFailed && (
+            <motion.div
+              className={`about-portrait${portraitLoaded ? ' loaded' : ''}`}
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: portraitLoaded ? 1 : 0, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <img
+                src={`${process.env.PUBLIC_URL}${data.portrait}`}
+                alt="Portrait of Ayush Upadhyay"
+                onLoad={() => setPortraitLoaded(true)}
+                onError={() => setPortraitFailed(true)}
+              />
+            </motion.div>
+          )}
           <motion.div
             className="about-text"
             initial={{ opacity: 0, x: -40 }}

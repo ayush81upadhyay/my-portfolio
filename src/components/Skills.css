@@ -17,6 +17,23 @@
   border-color: rgba(129, 140, 248, 0.4);
   box-shadow: 0 4px 24px var(--glow);
 }
+.skill-card { position: relative; overflow: hidden; }
+.skill-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, #7048e8, #c05bd8, #ff8a75);
+  transform: scaleX(0.35);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.skill-card:hover::before { transform: scaleX(1); }
+.skill-card::before { background: linear-gradient(90deg, #2563d9, #5892ee, #e34747); }
+.skill-card:hover { border-color: rgba(37, 99, 217, 0.38); box-shadow: 0 14px 32px rgba(37, 99, 217, 0.12); }
+.skill-category { color: #d33f45; }
+.skill-bar-track { background: #e6edf9; }
+.skill-bar-fill { background: linear-gradient(90deg, #2563d9, #548aeb 70%, #e34747); }
 
 .skill-category {
   font-size: 0.8rem;
@@ -54,4 +71,35 @@
   height: 100%;
   background: linear-gradient(90deg, var(--accent-vivid), var(--accent-soft));
   border-radius: 99px;
+}
+
+.skills-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); }
+.skills, .projects { position: relative; isolation: isolate; }
+.section-artwork {
+  position: absolute;
+  z-index: -1;
+  width: min(35vw, 410px);
+  height: auto;
+  opacity: 0.26;
+  pointer-events: none;
+}
+.skills-artwork { top: 8%; right: 0; }
+.skill-card {
+  background: linear-gradient(145deg, #fff 0%, #faf8ff 100%);
+  box-shadow: 0 8px 24px rgba(56, 38, 117, 0.05);
+}
+.skill-card:hover {
+  border-color: rgba(112, 72, 232, 0.38);
+  box-shadow: 0 14px 32px rgba(112, 72, 232, 0.13);
+  transform: translateY(-4px);
+}
+.skill-category { color: #e26075; }
+.skill-bar-track { background: #eeeaf8; }
+.skill-bar-fill { background: linear-gradient(90deg, #7048e8, #c05bd8, #ff8a75); }
+.skill-bar-label { color: #656178; }
+
+@media (max-width: 600px) {
+  .skills-grid { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  .skill-card { padding: 1.35rem; }
+  .skills-artwork { width: min(60vw, 250px); top: 5%; right: 0; opacity: 0.14; }
 }
