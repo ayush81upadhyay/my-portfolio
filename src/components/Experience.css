@@ -96,3 +96,44 @@
     border-bottom-color: var(--accent-vivid);
   }
 }
+
+.exp-tabs { border-color: rgba(112, 72, 232, 0.18); }
+.exp-tab { color: #77718d; }
+.exp-tab:hover { color: #5b3bd5; }
+.exp-tab.active { color: #5636cb; background: #eee9ff; border-color: #7048e8; }
+.exp-role span { color: #e26075; }
+.exp-meta { color: #858198; }
+.exp-project { color: #656178; }
+.exp-points li { color: #656178; }
+.exp-detail, .exp-layout, .exp-tab { min-width: 0; }
+
+@media (max-width: 768px) {
+  .exp-tabs { flex-wrap: wrap; border-bottom: 0; gap: 0.45rem; }
+  .exp-tab {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    margin: 0;
+    padding: 0.55rem 0.9rem;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .exp-tab.active { border: 1px solid #7048e8; }
+  .exp-layout { gap: 1.4rem; }
+  .exp-role { font-size: 1.15rem; overflow-wrap: anywhere; }
+}
+
+.exp-tab { transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s; }
+.exp-tab:hover { transform: translateX(3px); }
+.exp-tab:focus-visible { outline: 3px solid rgba(112, 72, 232, 0.35); outline-offset: 3px; }
+@media (max-width: 768px) {
+  .exp-tab:hover { transform: translateY(-2px); }
+}
+.exp-tabs { border-color: rgba(37, 99, 217, 0.18); }
+.exp-tab { color: #718098; }
+.exp-tab:hover { color: #1d4fc4; }
+.exp-tab.active { color: #1948ad; background: #e9f0ff; border-color: #2563d9; }
+.exp-role span { color: #d33f45; }
+.exp-meta, .exp-project, .exp-points li { color: #56647a; }
+@media (max-width: 768px) {
+  .exp-tab.active { border-color: #2563d9; }
+}

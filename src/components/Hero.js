@@ -27,6 +27,7 @@ function Hero({ data }) {
         dx: (Math.random() - 0.5) * 0.4,
         dy: (Math.random() - 0.5) * 0.4,
         alpha: Math.random() * 0.5 + 0.2,
+        color: ['37, 99, 217', '67, 133, 231', '227, 71, 71'][Math.floor(Math.random() * 3)],
       });
     }
 
@@ -35,7 +36,7 @@ function Hero({ data }) {
       particles.forEach((p) => {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(99, 102, 241, ${p.alpha})`;
+        ctx.fillStyle = `rgba(${p.color}, ${p.alpha})`;
         ctx.fill();
         p.x += p.dx;
         p.y += p.dy;
@@ -57,6 +58,12 @@ function Hero({ data }) {
   return (
     <section className="hero" id="hero">
       <canvas ref={canvasRef} className="hero-canvas" />
+      <img
+        className="hero-artwork"
+        src={`${process.env.PUBLIC_URL}/images/hero-developer-blue.svg`}
+        alt=""
+        aria-hidden="true"
+      />
       <div className="hero-content">
         <motion.p
           className="hero-greeting"

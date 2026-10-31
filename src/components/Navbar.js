@@ -7,15 +7,32 @@ const navLinks = ['About', 'Experience', 'Education', 'Skills', 'Projects', 'Con
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
+    const sections = navLinks
+      .map((link) => document.getElementById(link.toLowerCase()))
+      .filter(Boolean);
+    const observer = new IntersectionObserver((entries) => {
+      const visibleSection = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visibleSection) setActiveSection(visibleSection.target.id);
+    }, { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.15, 0.35, 0.6] });
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      observer.disconnect();
+    };
   }, []);
 
   const scrollTo = (id) => {
-    document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
+    const sectionId = id.toLowerCase();
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    setActiveSection(sectionId);
     setMenuOpen(false);
   };
 
@@ -39,7 +56,11 @@ function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 * i + 0.4 }}
           >
-            <button onClick={() => scrollTo(link)}>{link}</button>
+            <button
+              className={activeSection === link.toLowerCase() ? 'active' : ''}
+              aria-current={activeSection === link.toLowerCase() ? 'location' : undefined}
+              onClick={() => scrollTo(link)}
+            >{link}</button>
           </motion.li>
         ))}
       </ul>
@@ -70,7 +91,11 @@ function Navbar() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.05 * i }}
               >
-                <button onClick={() => scrollTo(link)}>{link}</button>
+                <button
+                  className={activeSection === link.toLowerCase() ? 'active' : ''}
+                  aria-current={activeSection === link.toLowerCase() ? 'location' : undefined}
+                  onClick={() => scrollTo(link)}
+                >{link}</button>
               </motion.li>
             ))}
           </motion.ul>

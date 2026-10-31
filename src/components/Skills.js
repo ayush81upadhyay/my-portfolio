@@ -12,6 +12,12 @@ function Skills({ data }) {
 
   return (
     <section className="skills section" id="skills" ref={ref}>
+      <img
+        className="section-artwork skills-artwork"
+        src={`${process.env.PUBLIC_URL}/images/creative-code-blue.svg`}
+        alt=""
+        aria-hidden="true"
+      />
       <div className="section-container">
         <motion.div
           className="section-label"
